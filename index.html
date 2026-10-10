@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dharma Decision — An AI-Based Ethical Decision-Making Simulator</title>
+  <meta name="description" content="Dharma Decision: a 3D ethical decision-making game inspired by the strategic and philosophical lessons of the Mahabharata." />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/three.module.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="game-canvas" aria-label="Dharma Decision 3D view"></canvas>
+  <div id="ui-root"></div>
+
+  <div id="boot-screen" role="status" aria-live="polite">
+    <div class="boot-inner">
+      <div class="boot-emblem"></div>
+      <h1>DHARMA DECISION</h1>
+      <p>Preparing the simulation…</p>
+      <div class="boot-bar"><span></span></div>
+      <p id="boot-error" class="boot-error" hidden></p>
+    </div>
+  </div>
+
+  <noscript>
+    <div style="position:fixed;inset:0;background:#0b1026;color:#f5f1e8;display:flex;align-items:center;justify-content:center;font-family:sans-serif;text-align:center;padding:2rem">
+      Dharma Decision needs JavaScript and WebGL. Please enable JavaScript in your browser.
+    </div>
+  </noscript>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "dharma-decision",
+  "version": "1.0.0",
+  "description": "DHARMA DECISION — An AI-Based Ethical Decision-Making Simulator (browser 3D game, Three.js)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python serve.py 8000 || python3 serve.py 8000",
+    "serve": "npx serve -l 8000 .",
+    "test:build": "node tests/buildall.cjs",
+    "test:road": "node tests/road.cjs && node tests/road2.cjs",
+    "test:wallet": "node tests/wallet.cjs && node tests/wallet_b.cjs",
+    "test:chars": "node tests/chars.cjs",
+    "test:vehicles": "node tests/vehicles.cjs",
+    "test:menus": "node tests/menus.cjs",
+    "test": "node tests/smoke.cjs && node tests/buildall.cjs && node tests/menus.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.47.0"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
